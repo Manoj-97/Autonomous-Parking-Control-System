@@ -1,4 +1,5 @@
 # Autonomous-Parking-Control-System
+PART 1:
 Training:
 •	The vehicle is controlled manually using the Raspberry Pi and made to park itself. The corresponding camera feed (pictures taken at a rate of 30 frames per second) is stored on the Raspberry Pi itself.
 •	This process of manually training the vehicle is done several times so as to get enough variance in the data obtained in order to get a good quality dataset.
@@ -18,5 +19,11 @@ Autonomous Run:
 python autonomous.py executes the latest model in the optimized_thethas folder. This program autonomously guides the car to a vacant parking space.
 
 Note: the images taken during training are 640 x 320, these are compressed to 100x100 while training the NN. Similarly, the input camera feed during autonomous run also compresses the image to 100x100 amd feeds it to the NN
+
+PART2:
+The user can connect to the local network available in the parking lot to identify the position of the vehicle. Each vehicle contains a uncique RfID tag and each lot has a reader. The readers are connected to a controller that hosts a web server which allows the user to identify the parking lot of his/her vehicle. The webserver folder contains the required files.
+
+Both systems in Part 1&2 are independent of each other.
+
 
 
